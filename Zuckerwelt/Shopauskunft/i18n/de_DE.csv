@@ -1,0 +1,7 @@
+"Shopauskunft Customer Reviews configuration","Shopauskunft Kundenbewertungen"
+"Enables or disables extension. If this is set to yes and you get the default template from Magento then you did something wrong.","Aktiviert oder deaktiviert die Erweiterung. Wenn diese Einstellung auf ja gesetzt wird und der Kundendialog auf der Bestätigungsseite nicht angezeigt wird, liegt ein Fehler in den Einstellungen vor."
+"Shopauskunft ID of the merchant","Shopauskunft ID laut Kundenkonto bei shopauskunft.de"
+"Shop Name","Shop Name"
+"Name of the shop. This name will be shown on the popup window of shopauskunft.","Name des Shops. Dieser Name wird auf dem Popup-Dialog von Shopauskunft auf der Bestellbestätigungsseite angezeigt."
+"Sandbox Mode","Sandbox-Modus"
+"Enables or disables the sandbox mode of the interface. If this is set to yes, the sandbox js file will be used.","Aktiviert oder deaktiviert den Testbetrieb der Schnittstelle. Wenn die Einstellung auf ja gesetzt wird werden im Javascript die Quellen für den Testbetrieb statt für den Normalbetrieb eingebunden. Sie erhalten in diesem Fall eine Bestätigungsmail mit den übertragenden Daten. Der Kunde erhält keine Bewertungsaufforderung."

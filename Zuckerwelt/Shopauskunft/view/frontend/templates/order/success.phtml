@@ -1,0 +1,30 @@
+<?php /* @var $block \Zuckerwelt\Shopauskunft\Block\Success */
+if ($block->isEnable()){
+	$xc_label = $block->getConfigShopauskunft_id();
+	$order = $block->getOrder();
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+	$locale = $objectManager->get('Magento\Framework\Locale\Resolver');
+	$shop_type = '3';
+	$seed = $xc_label.'|'.$order->getRealOrderId();
+	$token = openssl_encrypt($seed,'aes128','c2hvcGF1c2t1bmZ0', 0, 'aGFlbmRsZXJidW5k');
+?>
+<script type="text/javascript">
+var fetched_data = {
+'shop_name': '<?php echo $block->getConfigShopauskunft_shop_name()?>',
+'email': '<?= $order->getCustomerEmail(); ?>',
+'shop_type': '<?= $shop_type; ?>',
+'order_value': '<?= $order->getSubtotalInclTax(); ?>',
+'shipping_value': '<?= $order->getShippingInclTax(); ?>',
+'language': '<?= $locale->getLocale() ?? ' '; ?>',
+'url': '<?= $block->getUrl() ?? ''; ?>',
+'token': '<?= $token; ?>' }
+</script>
+<?php if ($block->isSandbox()): ?>
+<script type="text/javascript" src="https://rba.shopauskunft.de/js/sandbox_widget.js" id="sandbox_widget" async></script>
+<?php else: ?>
+<script type="text/javascript" src="https://rba.shopauskunft.de/js/rba_widget.js" id="rba_widget" async></script>
+<?php endif ?>
+<?php
+}
+?>

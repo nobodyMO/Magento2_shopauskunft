@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Shopauskunft" translate="label" sortOrder="10">
+            <label>Shopauskunft</label>
+        </tab>
+        <section id="shopauskunft" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Shopauskunft Customer Reviews configuration</label>
+            <tab>Shopauskunft</tab>
+            <resource>Zuckerwelt_Shopauskunft::shopauskunft_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <comment>Enables or disables extension. If this is set to yes and you get the default template from Magento then you did something wrong.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+               </field>
+               <field id="shopauskunft_id" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shopauskunft ID</label>
+                    <comment>Shopauskunft ID of the merchant</comment>
+                </field>
+                <field id="shopauskunft_shop_name" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shop Name</label>
+                    <comment>Name of the shop. This name will be shown on the popup window of shopauskunft.</comment>
+                </field>
+                <field id="sandbox" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sandbox Mode</label>
+                    <comment>Enables or disables the sandbox mode of the interface. If this is set to yes, the sandbox js file will be used.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+               </field>
+            </group>
+        </section>
+    </system>
+</config>
