@@ -2,7 +2,7 @@
     "name": "zuckerwelt/shopauskunft-module",
     "description": "Magento 2 module that adds Shopauskunft Customer Reviews to order success page.",
     "type": "magento2-module",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "license": [
       "OSL-3.0",
       "AFL-3.0"
