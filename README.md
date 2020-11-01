@@ -3,7 +3,7 @@ Magento 2 Module for shopauskunft customer review dialog on success page.
 This is an inofficial module. The author is not related to shopauskunft.de.
 ## How to install
 ```sh
-$ composer config repositories.magento2-brands git git@github.com:nobodyMO/Magento2_shopauskunft.git
+$ composer config repositories.magento2-shopauskunft git git@github.com:nobodyMO/Magento2_shopauskunft.git
 $ composer require zuckerwelt/shopauskunft-module
 $ composer update
 $ php bin/magento module:enable Zuckerwelt_Shopauskunft
